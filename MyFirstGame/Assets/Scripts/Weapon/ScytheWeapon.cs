@@ -3,14 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//镰刀
 public class ScytheWeapon : Weapon
 {
     private  const string ANIM_PARM_ISATTACK = "isAttack";
 
     private Animator anim;
 
+    public int atkValue = 50;
+    
     private void Start()
     {
+        Debug.Log("player  transform.position : " + transform.parent.parent.position);
+
         anim = GetComponent<Animator>();
     }
 
@@ -33,8 +38,8 @@ public class ScytheWeapon : Weapon
     {
         if (other.tag == Tag.ENEMY)
         {
-            //TODO
-            print("Trigger with " + other.name);
+            Debug.Log("镰刀攻击到敌人 攻击力 ： " +  atkValue);
+            other.GetComponent<Enemy>().TakeDamage(atkValue);
         }
         
     }

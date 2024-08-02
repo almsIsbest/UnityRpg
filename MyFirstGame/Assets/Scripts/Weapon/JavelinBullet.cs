@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//标枪子弹
 public class JavelinBullet : MonoBehaviour
 {
+    public int atkValue = 30;
     private Rigidbody rgd;
     private Collider col;
     
@@ -26,6 +28,14 @@ public class JavelinBullet : MonoBehaviour
         rgd.velocity = Vector3.zero;
         rgd.isKinematic = true;
         col.enabled = false;
-        Destroy(this.gameObject , 1f);
+
+        transform.parent = other.gameObject.transform;
+        
+        Destroy(this.gameObject , 3f);
+        
+        if(other.gameObject.tag == Tag.ENEMY)
+        {
+            other.gameObject.GetComponent<Enemy>().TakeDamage(atkValue);
+        }
     }
 }

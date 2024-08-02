@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         playerAgent = GetComponent<NavMeshAgent>();
+        Debug.Log("player  transform.position : " + transform.position);
         
     }
 
@@ -37,7 +38,7 @@ public class PlayerMove : MonoBehaviour
                     playerAgent.stoppingDistance = 0;
                     playerAgent.SetDestination(hit.point);
                 }else if (hit.collider.tag == "Interactable")
-                {
+                { 
                     hit.collider.GetComponent<InteractableObject>().OnClick(playerAgent);
                 }
             }
