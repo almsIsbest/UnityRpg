@@ -12,7 +12,8 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("player  transform.position : " + transform.position);
+
     }
 
     // Update is called once per frame
