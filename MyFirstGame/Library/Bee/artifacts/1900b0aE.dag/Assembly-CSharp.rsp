@@ -377,6 +377,8 @@
 "Assets/Scripts/SO/ItemSO.cs"
 "Assets/Scripts/SO/TestScriptsObject.cs"
 "Assets/Scripts/UI/DialogueUI.cs"
+"Assets/Scripts/UI/InventoryUI.cs"
+"Assets/Scripts/UI/ItemUI.cs"
 "Assets/Scripts/Weapon/JavelinBullet.cs"
 "Assets/Scripts/Weapon/JavelinWeapon.cs"
 "Assets/Scripts/Weapon/ScytheWeapon.cs"

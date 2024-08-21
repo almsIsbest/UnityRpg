@@ -1,0 +1,50 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# Visual Studio / MonoDevelop generated files
+.vscode/
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.suo
+*.pidb
+*.userprefs
+*.booproj
+*.svd
+
+# Rider generated files
+.idea/
+
+# Unity auto-generated files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# JetBrains Rider specific files
+.idea/
+*.sln.iml
+
+# Unity build output
+Build/
+Builds/
+
+# User-specific settings
+UserSettings/

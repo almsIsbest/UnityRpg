@@ -18,6 +18,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private List<string> contentList;
 
     private int contentIndex = 0;
+    private GameObject uiGameObject;
     
     
     private void Awake()
@@ -31,11 +32,13 @@ public class DialogueUI : MonoBehaviour
     private void Start()
     {
         Debug.Log("单例模式进来了");
-        gameObject.SetActive(false);
-        nameText = transform.Find("NameTextBg/NameText").GetComponent<TextMeshProUGUI>();
-        contentText = transform.Find("ContentText").GetComponent<TextMeshProUGUI>();
-        ContinueButton = transform.Find("ContinueButton").GetComponent<Button>();
+        // gameObject.SetActive(false);
+        nameText = transform.Find("UI/NameTextBg/NameText").GetComponent<TextMeshProUGUI>();
+        contentText = transform.Find("UI/ContentText").GetComponent<TextMeshProUGUI>();
+        ContinueButton = transform.Find("UI/ContinueButton").GetComponent<Button>();
         ContinueButton.onClick.AddListener(OnContinueButtonClick);
+        uiGameObject = transform.Find("UI").gameObject;
+        Hide();
     }
 
 
@@ -50,13 +53,13 @@ public class DialogueUI : MonoBehaviour
         contentList = new List<string>();
         contentList.AddRange(content);
         contentText.text = contentList[0];
-        gameObject.SetActive(true);
+        uiGameObject.SetActive(true);
     }
 
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        uiGameObject.SetActive(false);
     }
     
     

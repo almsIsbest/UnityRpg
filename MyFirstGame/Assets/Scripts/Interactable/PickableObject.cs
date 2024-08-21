@@ -8,6 +8,8 @@ public class PickableObject : InteractableObject
     
     protected override void Interact()
     {
+        Destroy(this.gameObject);
         Debug.Log("Interact with Pickable " + name);
+        InventoryManager.instance.AddItem(ItemSo);
     }
 }

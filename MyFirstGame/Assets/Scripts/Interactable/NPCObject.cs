@@ -11,6 +11,7 @@ public class NPCObject : InteractableObject
     
     protected override void Interact()
     {
+        Debug.Log("进入NPC 对话");
         DialogueUI.instance.show(name, content);
     }
 }

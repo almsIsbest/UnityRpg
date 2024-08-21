@@ -14,8 +14,6 @@ public class ScytheWeapon : Weapon
     
     private void Start()
     {
-        Debug.Log("player  transform.position : " + transform.parent.parent.position);
-
         anim = GetComponent<Animator>();
     }
 
