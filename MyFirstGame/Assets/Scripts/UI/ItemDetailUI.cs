@@ -28,6 +28,7 @@ public class ItemDetailUI : MonoBehaviour
 
      public void UpdateItemDetailUI(ItemSO itemSo , ItemUI itemUI)
     {
+        this.gameObject.SetActive(true);
         this.itemUI = itemUI;
         this.itemSo = itemSo;
         string type = "";
@@ -91,6 +92,7 @@ public class ItemDetailUI : MonoBehaviour
     public void OnUseButtonClick()
     {
         InventoryUI.instance.onItemUse(itemSo , itemUI);
+        this.gameObject.SetActive(false);
     }
     
 }

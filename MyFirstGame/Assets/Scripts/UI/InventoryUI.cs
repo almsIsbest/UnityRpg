@@ -12,6 +12,7 @@ public class InventoryUI : MonoBehaviour
 
     private GameObject content;
     public GameObject itemPrefab;
+    public ItemDetailUI itemDetailUI;
 
     public bool isShow = false;
     
@@ -87,6 +88,19 @@ public class InventoryUI : MonoBehaviour
         Debug.Log("itemUI :" + itemUi);
         itemUi.InitItem(itemSo);
     }
+
+
+    public void OnItemClick(ItemSO itemSo , ItemUI itemUI)
+    {
+        itemDetailUI.UpdateItemDetailUI(itemSo , itemUI);
+    }
     
     
+    public void onItemUse(ItemSO itemSo , ItemUI itemUI)
+    {
+        Destroy(itemUI.gameObject);
+        InventoryManager.instance.RemoveItem(itemSo);
+        
+    }
+  
 }

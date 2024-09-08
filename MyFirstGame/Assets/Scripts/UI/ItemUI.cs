@@ -29,5 +29,13 @@ public class ItemUI : MonoBehaviour
         iconImage.sprite = itemSo.icon;
         nameText.text = itemSo.name;
         typeText.text = type;
+        this.itemSo = itemSo;
     }
+
+    public void OnClick()
+    {
+        InventoryUI.instance.OnItemClick(itemSo , this);
+    }
+    
+    
 }
